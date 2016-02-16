@@ -6,3 +6,18 @@ def hhmmss2sec( hours, minutes, seconds ):
 	
 	return result
 	
+def checkHourRange( hours ):
+	"""Check if hours value is between 00 and 23"""
+	
+	if hours >= 0 and hours <=23:
+		return True
+		
+	return False
+	
+def checkMinutesSecondsRange( value ):
+	"""Check if minutes/seconds value is between 00 and 59"""
+	
+	if value >= 0 and value <=59:
+		return True
+		
+	return False
