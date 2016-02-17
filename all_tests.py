@@ -13,6 +13,10 @@ class AllTests(TestCase):
         """Test if function return correct value for 00:00:00."""
         self.assertEqual( hour_man.hhmmss2sec(0,0,0), 0 )
         
+    def test_random_hour(self):
+        """Test if function return correct value for 15:32:11."""
+        self.assertEqual( hour_man.hhmmss2sec(15,32,11), 55931 )        
+        
     def test_max_hour(self):
         """Test if function return correct value for 23:59:59."""
         self.assertEqual( hour_man.hhmmss2sec(23,59,59), 86399 )
