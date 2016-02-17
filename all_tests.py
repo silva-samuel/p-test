@@ -33,5 +33,3 @@ class AllTests(TestCase):
         """Test if function returns True for minutes/seconds value out of 0 and 59 range."""        
         self.assertFalse( hour_man.checkMinutesSecondsRange(60) )
         
-if __name__ == '__main__':
-    unittest.main()        

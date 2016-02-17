@@ -1,10 +1,16 @@
 
 def hhmmss2sec( hours, minutes, seconds ):
 	"""Given a hour value in th eformat hh:mm:ss convert it to the amount of seconds"""
+	if checkHourRange( hours ) == False:
+		return -1
+	elif checkMinutesSecondsRange( minutes ) == False:
+		return -1
+	elif checkMinutesSecondsRange( seconds ) == False:
+		return -1
+	else:
+		result = ( hours * 3600) + ( minutes * 60) + seconds
 	
-	result = ( hours * 3600) + ( minutes * 60) + seconds
-	
-	return result
+		return result
 	
 def checkHourRange( hours ):
 	"""Check if hours value is between 00 and 23"""
